@@ -3,6 +3,9 @@
 
 # Ignore .log files
 *.log
+package.json
+package-lock.json
 
 # Ignore temp folder
 temp/
+node_modules/
