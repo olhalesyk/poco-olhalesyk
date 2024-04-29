@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calculator</title>
+    <script src="../exercises-23-04.js" defer></script>
+</head>
+<body>
+    <main>
+        <h1>Age calculator</h1>
+        <p>Enter your b-Day date and some future date to get your age in that future year.</p>
+        <form onsubmit="event.preventDefault();  bDayCalc()" >
+            <label for="b-day">Enter your B-Day</label>
+            <input type="date" name="b-day" id="b-day" min="1900-01-01">
+            <label for="future-day">Enter Future date</label>
+            <input type="date" name="future-day" id="future-day">
+            <button type="submit">Submit dates</button>
+        </form>
+        <p>Your age will be:</p>
+        <p id="future-age"></p>
+    </main>
+</body>
+</html>
