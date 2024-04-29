@@ -1,0 +1,84 @@
+html {
+    box-sizing: border-box;
+    color: #757a82;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1;
+    text-transform: uppercase;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+body{
+    display: grid;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    grid-template-areas: 
+        "nav"
+        "header" 
+        "content" 
+        "sign-up-area"
+        "orange" 
+        "red"
+        "violet";
+    grid-template-rows: 1fr 3fr 6fr 3fr 3fr 3fr 3fr;
+    grid-template-columns: 1fr;
+    
+}
+.box-area{
+    display: grid;
+}
+nav{
+    background-color: #5995db;
+    grid-area: nav;
+    min-height: 50px;
+}
+.header{
+    background-color: #b2d6ff;
+    grid-area: header;
+}
+.content{
+    background-color: #ebedf0;
+    grid-area: content;
+}
+.orange{
+    background-color: #f5cf8f;
+    grid-area: orange;
+}
+.violet{
+    background-color: #c9c6fa;
+    grid-area: violet;
+}
+.red{
+    background-color: #f09a9d;
+    grid-area: red;
+}
+.sign-up-area{
+    background-color: #d7e9fe;
+    grid-area: sign-up-area;
+}
+header, section, .content{
+    padding: 10px;
+    align-content: center;
+}
+@media screen and (min-width:46.8em){
+    body{
+        grid-template: 
+            "nav nav" 1fr
+            "header header" 3fr
+            "content content" 6fr
+            "sign-up-area orange" 3fr
+            "red violet" 3fr;
+    }
+}
+@media screen and (min-width:54.5em){
+    body{
+        grid-template: 
+            "nav nav nav" 1fr
+            "header header header" 3fr
+            "orange violet red" 3fr
+            "sign-up-area sign-up-area sign-up-area" 2fr
+            "content content content" 6fr;
+    }
+        
+}
